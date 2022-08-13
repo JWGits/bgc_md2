@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.13.6
+#       jupytext_version: 1.14.0
 #   kernelspec:
 #     display_name: Python 3 (ipykernel)
 #     language: python
@@ -53,7 +53,7 @@ sys.path.insert(0,'..') # necessary to import general_helpers
 from general_helpers import (
     download_TRENDY_output,
     day_2_month_index,
-    month_2_day_index,
+    #month_2_day_index,
     make_B_u_funcs_2,
     monthly_to_yearly,
     plot_solutions,
@@ -92,7 +92,7 @@ dh.mass_balance_equation(mvs)
 # + codehighlighter=[[11, 12], [16, 17], [8, 28], [41, 43], [8, 24], [42, 44]]
 with Path('config.json').open(mode='r') as f:
     conf_dict=json.load(f) 
-#msh.download_my_TRENDY_output(conf_dict)
+msh.download_my_TRENDY_output(conf_dict)
 # -
 
 # ## Connect Data and Symbols (Must Edit)
